@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { gameData, generateQuestions } from '../data/gameData';
+import { gameData, generateQuestions, sounds } from '../data/gameData';
 
 const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
   const chapter = gameData[day];
@@ -21,7 +21,6 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
   const inputRef = useRef(null);
   const currentSoundRef = useRef(null);
 
-  const correctSounds = ['golden.mp3', 'takedown.mp3', 'done.mp3'];
   const currentQuestion = questions[currentQuestionIndex];
 
   const handleSubmitAnswer = () => {
@@ -41,8 +40,8 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
           currentSoundRef.current.currentTime = 0;
         }
         
-        const currentCorrectSound = correctSounds[correctSoundIndex];
-        const correctSound = new Audio(`/assets/images/${currentCorrectSound}`);
+        const currentCorrectSound = sounds.correct[correctSoundIndex];
+        const correctSound = new Audio(currentCorrectSound);
         currentSoundRef.current = correctSound;
         
         correctSound.play().catch(e => console.log('Audio play failed:', e));
@@ -57,7 +56,7 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
       }
       
       // Cycle to next correct sound
-      setCorrectSoundIndex((correctSoundIndex + 1) % correctSounds.length);
+      setCorrectSoundIndex((correctSoundIndex + 1) % sounds.correct.length);
       
       setScore(score + 1);
       setHeroAttacking(true);
@@ -71,8 +70,8 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
           currentSoundRef.current.currentTime = 0;
         }
         
-        const wrongSound = new Audio('/assets/images/wrong.mp3');
-        wrongSound.play().catch(e => console.log('Audio play failed:', e));
+        const wrongAudio = new Audio(sounds.wrong);
+        wrongAudio.play().catch(e => console.log('Audio play failed:', e));
       }
       
       setWrongAnswers(wrongAnswers + 1);

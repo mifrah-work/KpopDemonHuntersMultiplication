@@ -4,6 +4,25 @@ import { gameData } from '../data/gameData';
 const ChapterStory = ({ day, onStartGame, onBack }) => {
   const chapter = gameData[day];
   
+  const handleStartGame = () => {
+    // Initialize audio context to enable sound playback
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (AudioContext) {
+      const audioContext = new AudioContext();
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
+    }
+    
+    // Also create a dummy audio element to ensure audio permission
+    const audio = new Audio();
+    audio.play().catch(() => {
+      // This will likely fail, but it establishes the audio context
+    });
+    
+    onStartGame();
+  };
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-pink-900 flex items-center justify-center p-8">
       <div className="max-w-4xl mx-auto bg-black/40 rounded-3xl p-12 border-4 border-yellow-400 shadow-2xl">
@@ -89,10 +108,10 @@ const ChapterStory = ({ day, onStartGame, onBack }) => {
               ← Back to Days
             </button>
             <button
-              onClick={onStartGame}
+              onClick={handleStartGame}
               className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-400 text-white font-bold text-xl rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/50"
             >
-              🚀 Start Battle!
+              🚀 Start Battle! (Enable Audio)
             </button>
           </div>
           

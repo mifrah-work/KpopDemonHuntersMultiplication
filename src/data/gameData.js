@@ -1,11 +1,25 @@
+// Import all character images
+import rumiImg from '../assets/images/rumi.png';
+import miraImg from '../assets/images/mira.png';
+import zoeImg from '../assets/images/zoe.png';
+import tigerImg from '../assets/images/tiger.png';
+import demonImg from '../assets/images/demon.png';
+import sajaImg from '../assets/images/saja.png';
+
+// Import all sound files
+import goldenSound from '../assets/sounds/golden.mp3';
+import takedownSound from '../assets/sounds/takedown.mp3';
+import doneSound from '../assets/sounds/done.mp3';
+import wrongSound from '../assets/sounds/wrong.mp3';
+
 export const gameData = {
   1: {
     title: "Chapter 1",
     story: "Rumi faces a demon trying to steal fans' energy.",
     hero: "Rumi",
     villain: "Energy Demon",
-    heroImage: "/assets/images/rumi.png",
-    villainImage: "/assets/images/demon.png",
+    heroImage: rumiImg,
+    villainImage: demonImg,
     unlocked: true
   },
   2: {
@@ -13,8 +27,8 @@ export const gameData = {
     story: "Mira confronts a Saja Boys blocking the stage.",
     hero: "Mira",
     villain: "Saja Boys",
-    heroImage: "/assets/images/mira.png",
-    villainImage: "/assets/images/saja.png",
+    heroImage: miraImg,
+    villainImage: sajaImg,
     unlocked: false
   },
   3: {
@@ -22,8 +36,8 @@ export const gameData = {
     story: "Zoey battles a sneaky demon hiding in the concert lights.",
     hero: "Zoey",
     villain: "Light Demon",
-    heroImage: "/assets/images/zoe.png",
-    villainImage: "/assets/images/demon.png",
+    heroImage: zoeImg,
+    villainImage: demonImg,
     unlocked: false
   },
   4: {
@@ -31,8 +45,8 @@ export const gameData = {
     story: "Suzie the Tiger leaps at a demon that jumped into the crowd.",
     hero: "Suzie the Tiger",
     villain: "Crowd Demon",
-    heroImage: "/assets/images/tiger.png",
-    villainImage: "/assets/images/demon.png",
+    heroImage: tigerImg,
+    villainImage: demonImg,
     unlocked: false
   },
   5: {
@@ -40,8 +54,8 @@ export const gameData = {
     story: "Rumi challenges the Saja Boys attempting to disrupt rehearsal.",
     hero: "Rumi",
     villain: "Saja Boys",
-    heroImage: "/assets/images/rumi.png",
-    villainImage: "/assets/images/saja.png",
+    heroImage: rumiImg,
+    villainImage: sajaImg,
     unlocked: false
   },
   6: {
@@ -49,8 +63,8 @@ export const gameData = {
     story: "Mira protects the fans from a charging demon in the streets.",
     hero: "Mira",
     villain: "Street Demon",
-    heroImage: "/assets/images/mira.png",
-    villainImage: "/assets/images/demon.png",
+    heroImage: miraImg,
+    villainImage: demonImg,
     unlocked: false
   },
   7: {
@@ -58,10 +72,15 @@ export const gameData = {
     story: "Zoey faces the final Saja Boys boss, blocking the stadium exit.",
     hero: "Zoey",
     villain: "Saja Boys Boss",
-    heroImage: "/assets/images/zoe.png",
-    villainImage: "/assets/images/saja.png",
+    heroImage: zoeImg,
+    villainImage: sajaImg,
     unlocked: false
   }
+};
+
+export const sounds = {
+  correct: [goldenSound, takedownSound, doneSound],
+  wrong: wrongSound
 };
 
 export const multiplicationTables = [1, 2, 3, 4, 5, 10, 11];
