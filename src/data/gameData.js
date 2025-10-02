@@ -83,7 +83,7 @@ export const sounds = {
   wrong: wrongSound
 };
 
-export const multiplicationTables = [1, 2, 3, 4, 5, 10, 11];
+export const multiplicationTables = [3, 4];
 
 export const generateQuestion = () => {
   const table = multiplicationTables[Math.floor(Math.random() * multiplicationTables.length)];

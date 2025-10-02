@@ -35,6 +35,22 @@ const ChapterStory = ({ day, onStartGame, onBack }) => {
             {chapter.title}
           </h2>
           
+          {/* Action Buttons - Moved to top */}
+          <div className="flex justify-center space-x-6 mb-8">
+            <button
+              onClick={onBack}
+              className="px-8 py-4 bg-gray-600 hover:bg-gray-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105"
+            >
+              ← Back to Days
+            </button>
+            <button
+              onClick={handleStartGame}
+              className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-400 text-white font-bold text-xl rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/50"
+            >
+              🚀 Start Battle!
+            </button>
+          </div>
+          
           {/* Story Section */}
           <div className="bg-white/10 rounded-2xl p-8 mb-8">
             <h3 className="text-2xl font-bold text-yellow-300 mb-4">📖 The Story</h3>
@@ -97,22 +113,6 @@ const ChapterStory = ({ day, onStartGame, onBack }) => {
               <p>• Wrong answers give the villain strength</p>
               <p>• Defeat the villain with 3 or fewer mistakes to win!</p>
             </div>
-          </div>
-          
-          {/* Action Buttons */}
-          <div className="flex justify-center space-x-6">
-            <button
-              onClick={onBack}
-              className="px-8 py-4 bg-gray-600 hover:bg-gray-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105"
-            >
-              ← Back to Days
-            </button>
-            <button
-              onClick={handleStartGame}
-              className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-400 text-white font-bold text-xl rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/50"
-            >
-              🚀 Start Battle!
-            </button>
           </div>
           
           {/* Motivational text */}
