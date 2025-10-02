@@ -111,7 +111,7 @@ const ChapterStory = ({ day, onStartGame, onBack }) => {
               onClick={handleStartGame}
               className="px-12 py-4 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-400 text-white font-bold text-xl rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-400/50"
             >
-              🚀 Start Battle! (Enable Audio)
+              🚀 Start Battle!
             </button>
           </div>
           

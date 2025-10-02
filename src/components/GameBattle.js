@@ -46,13 +46,7 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
         
         correctSound.play().catch(e => console.log('Audio play failed:', e));
         
-        // Stop the sound after 0.5 seconds
-        setTimeout(() => {
-          if (currentSoundRef.current === correctSound) {
-            correctSound.pause();
-            correctSound.currentTime = 0;
-          }
-        }, 500);
+        // Let the audio play naturally without cutting it off
       }
       
       // Cycle to next correct sound
