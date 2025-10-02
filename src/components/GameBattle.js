@@ -74,7 +74,7 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
     }
 
     // Reset animations and move to next question after delay
-    const delay = isCorrect ? 0 : 15000; // Instant for correct, 15 seconds for wrong
+    const delay = isCorrect ? 0 : 5000; // Instant for correct, 5 seconds for wrong
     
     setTimeout(() => {
       setHeroAttacking(false);
