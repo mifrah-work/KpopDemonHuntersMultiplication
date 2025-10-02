@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/KpopDemonHuntersMultiplication/static/css/main.7a737f87.css",
+    "main.js": "/KpopDemonHuntersMultiplication/static/js/main.b4e1a664.js",
+    "index.html": "/KpopDemonHuntersMultiplication/index.html",
+    "main.7a737f87.css.map": "/KpopDemonHuntersMultiplication/static/css/main.7a737f87.css.map",
+    "main.b4e1a664.js.map": "/KpopDemonHuntersMultiplication/static/js/main.b4e1a664.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a737f87.css",
+    "static/js/main.b4e1a664.js"
+  ]
+}
