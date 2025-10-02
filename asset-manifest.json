@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KpopDemonHuntersMultiplication/static/css/main.7a737f87.css",
-    "main.js": "/KpopDemonHuntersMultiplication/static/js/main.5378f99d.js",
+    "main.js": "/KpopDemonHuntersMultiplication/static/js/main.d6171e92.js",
     "static/media/mira.png": "/KpopDemonHuntersMultiplication/static/media/mira.1831809346e776d38e9d.png",
     "static/media/saja.png": "/KpopDemonHuntersMultiplication/static/media/saja.4fe2ec44ac79e3271fb8.png",
     "static/media/zoe.png": "/KpopDemonHuntersMultiplication/static/media/zoe.66018213f4188c9e5dee.png",
@@ -14,10 +14,10 @@
     "static/media/takedown.mp3": "/KpopDemonHuntersMultiplication/static/media/takedown.082ae552ddfc2732a6ed.mp3",
     "index.html": "/KpopDemonHuntersMultiplication/index.html",
     "main.7a737f87.css.map": "/KpopDemonHuntersMultiplication/static/css/main.7a737f87.css.map",
-    "main.5378f99d.js.map": "/KpopDemonHuntersMultiplication/static/js/main.5378f99d.js.map"
+    "main.d6171e92.js.map": "/KpopDemonHuntersMultiplication/static/js/main.d6171e92.js.map"
   },
   "entrypoints": [
     "static/css/main.7a737f87.css",
-    "static/js/main.5378f99d.js"
+    "static/js/main.d6171e92.js"
   ]
 }
