@@ -74,7 +74,7 @@ const GameBattle = ({ day, onGameComplete, onBack, onBackToHome }) => {
     }
 
     // Reset animations and move to next question after delay
-    const delay = isCorrect ? 0 : 2000; // Instant for correct, 2 seconds for wrong
+    const delay = isCorrect ? 0 : 1000; // Instant for correct, 1 second for wrong
     console.log('Delay set to:', delay, 'ms'); // Debug log
     
     setTimeout(() => {
